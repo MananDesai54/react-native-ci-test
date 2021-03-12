@@ -17,8 +17,6 @@ jobs:
         run: |
           yarn install
 
-      - run: yarn test-ci
-
       - run: ./gradlew assembleDebug -Dorg.gradle.logging.level=info
         working-directory: android
         name: Build Android apk (debug)
