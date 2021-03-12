@@ -9,7 +9,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 15.x
-      - run: yarn test-ci
+      - run: npm ci
       - run: xcode-select -p
       - run: pod install
         working-directory: ios
