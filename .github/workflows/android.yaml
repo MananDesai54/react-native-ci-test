@@ -11,8 +11,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 15.x
+      - name: Install node modules
+        run: |
+          yarn install
 
-      - run: yarn run ci
+      -  name: Run test
+        run: |
+          yarn test-ci
 
       - run: ./gradlew assembleDebug -Dorg.gradle.logging.level=info
         working-directory: android
